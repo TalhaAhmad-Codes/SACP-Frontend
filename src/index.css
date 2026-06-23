@@ -148,23 +148,23 @@
 
   /* Badge Variants */
   .theme-badge-active {
-    @apply theme-badge bg-green-100 text-green-700 border-green-200;
+    @apply bg-green-100 text-green-700 border-green-200;
   }
 
   .theme-badge-warning {
-    @apply theme-badge bg-amber-100 text-amber-700 border-amber-200;
+    @apply bg-amber-100 text-amber-700 border-amber-200;
   }
 
   .theme-badge-critical {
-    @apply theme-badge bg-red-100 text-red-700 border-red-200;
+    @apply bg-red-100 text-red-700 border-red-200;
   }
 
   .theme-badge-info {
-    @apply theme-badge bg-blue-100 text-blue-700 border-blue-200;
+    @apply bg-blue-100 text-blue-700 border-blue-200;
   }
 
   .theme-badge-inactive {
-    @apply theme-badge bg-slate-100 text-slate-500 border-slate-200;
+    @apply bg-slate-100 text-slate-500 border-slate-200;
   }
 
   /* 4. Table Style */
