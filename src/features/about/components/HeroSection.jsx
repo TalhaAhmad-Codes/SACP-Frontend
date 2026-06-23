@@ -1,7 +1,9 @@
+
 function HeroSection(){
 
     return(
         <>
+       
         <section className="bg-[#114374] text-white text-center py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
         <div className="max-w-3xl mx-auto space-y-6">
           
@@ -23,12 +25,12 @@ function HeroSection(){
             modern academic institution.
           </p>
 
-         
           <div className="pt-4 flex justify-center">
             <div className="w-16 h-1 bg-[#2563eb] rounded-full"></div>
           </div>
         </div>
       </section>
+     
  
         </>
     )
