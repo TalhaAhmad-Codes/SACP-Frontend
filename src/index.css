@@ -49,39 +49,39 @@
 }
 
 @layer components {
-  /* 1. Font & spacing */
+  /* 1. Font & spacing (Fixed em units to rem) */
   .theme-title {
-    font-size: 24em;
+    font-size: 1.5rem; /* 24px */
     font-weight: bold;
   }
 
   .theme-section-title {
-    font-size: 18em;
+    font-size: 1.125rem; /* 18px */
     font-weight: bold;
   }
 
   .theme-card-title {
-    font-size: 16em;
+    font-size: 1rem; /* 16px */
     font-weight: 600;
   }
 
   .theme-body-heading {
-    font-size: 14em;
+    font-size: 0.875rem; /* 14px */
     font-weight: 600;
   }
 
   .theme-body-text {
-    font-size: 12em;
+    font-size: 0.75rem; /* 12px */
     font-weight: 400;
   }
 
   .theme-label-text {
-    font-size: 11em;
+    font-size: 0.6875rem; /* 11px */
     font-weight: 500;
   }
 
   .theme-badge-text {
-    font-size: 10em;
+    font-size: 0.625rem; /* 10px */
     font-weight: 500;
   }
 
@@ -136,31 +136,35 @@
     @apply w-5 h-5;
   }
 
-  /* 3. Badges */
-  /* Base Style */
-  .theme-badge {
+  /* 3. Badges (Fixed Tailind v4 unknown utility compilation issue) */
+  .theme-badge,
+  .theme-badge-active,
+  .theme-badge-warning,
+  .theme-badge-critical,
+  .theme-badge-info,
+  .theme-badge-inactive {
     @apply text-xs px-2.5 py-0.5 rounded-full border font-medium inline-flex items-center justify-center;
   }
 
   /* Badge Variants */
   .theme-badge-active {
-    @apply text-xs px-2.5 py-0.5 rounded-full border font-medium inline-flex items-center justify-center bg-green-100 text-green-700 border-green-200;
+    @apply theme-badge bg-green-100 text-green-700 border-green-200;
   }
 
   .theme-badge-warning {
-    @apply text-xs px-2.5 py-0.5 rounded-full border font-medium inline-flex items-center justify-center bg-amber-100 text-amber-700 border-amber-200;
+    @apply theme-badge bg-amber-100 text-amber-700 border-amber-200;
   }
 
   .theme-badge-critical {
-    @apply text-xs px-2.5 py-0.5 rounded-full border font-medium inline-flex items-center justify-center bg-red-100 text-red-700 border-red-200;
+    @apply theme-badge bg-red-100 text-red-700 border-red-200;
   }
 
   .theme-badge-info {
-    @apply text-xs px-2.5 py-0.5 rounded-full border font-medium inline-flex items-center justify-center bg-blue-100 text-blue-700 border-blue-200;
+    @apply theme-badge bg-blue-100 text-blue-700 border-blue-200;
   }
 
   .theme-badge-inactive {
-    @apply text-xs px-2.5 py-0.5 rounded-full border font-medium inline-flex items-center justify-center bg-slate-100 text-slate-500 border-slate-200;
+    @apply theme-badge bg-slate-100 text-slate-500 border-slate-200;
   }
 
   /* 4. Table Style */
@@ -246,8 +250,6 @@
     display: none !important;
   }
 
-  /* Optional: Ensure your main login form container expands 
-     to take up 100% width when the image is hidden */
   .display-full {
     width: 100%;
   }
@@ -255,6 +257,6 @@
     grid-template-columns: 1fr;
   }
   .Login-Form-Container {
-    padding: 20em;
+    padding: 1.25rem; /* Changed 20em to a standard spacing container */
   }
 }
