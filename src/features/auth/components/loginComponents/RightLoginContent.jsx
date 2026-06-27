@@ -12,20 +12,20 @@ const RightLoginContent = ({ onNavigate }) => {
   };
 
   return (
-    <div className="h-screen flex flex-col flex-1">
+    <div className="h-screen flex flex-col flex-1 text-text-body">
       <FormHeader />
 
       <div className="flex flex-1 justify-center items-center font-login-page Login-Form-Container">
         <div className="w-full px-6 max-w-md">
-          <h1 className="text-4xl md:text-5xl text-Login-Heading mb-2 font-bold leading-tight">
+          <h1 className=" font-bold leading-tight theme-form-title text-text-heading">
             Welcome
           </h1>
-          <p className="text-base md:text-xl text-Login-Text">
+          <p className="text-base theme-badge-text mb-3">
             Login to your academic workspace
           </p>
 
           <form
-            className="flex flex-col gap-3"
+            className="flex flex-col space-form theme-form-stack"
             onSubmit={handleSubmit(onSubmit)}
           >
             <InputField
@@ -44,8 +44,8 @@ const RightLoginContent = ({ onNavigate }) => {
             <Button label="Login" />
           </form>
 
-          <div className="flex justify-center items-center gap-2 mt-7 md:mt-10">
-            <p className="text-center text-Login-Text text-sm">
+          <div className="flex justify-center items-center space-x-2 mt-7 md:mt-10">
+            <p className="text-center text-Login-Text">
               Don't have an account?
             </p>
             <p

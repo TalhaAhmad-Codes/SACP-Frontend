@@ -2,7 +2,19 @@
 @import "tailwindcss";
 
 @theme {
+    --color-Page-background: #F8FAFC;
+ --color-Login-Heading: #0B1C30;
+ --color-Login-Text: #43474E;
+ --color-Login-Button: #1A365D;
+ --color-Login-Forgot-Password: #0061A5;
+  --color-Login-Register-Link: #0061A5;
+--color-input-border: #C4C6CF;
+/*Landing Page -> HomePage -> */
+--color-role-box: #EFF4FF;
+--color-role-box-border: #C4C6CF;
   /* Main Theme Colors */
+    --color-button-background: #004ac6;
+
   --color-main-brand: #2563eb;
   --color-hover-state: #1d4ed8;
   --color-primary-background: #dbeafe;
@@ -32,6 +44,8 @@
 }
 
 @layer base {
+  
+  
   .theme-h1 {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 600;
@@ -50,6 +64,10 @@
 
 @layer components {
   /* 1. Font & spacing (Fixed em units to rem) */
+  .theme-form-title{
+    font-size: 3rem;
+    font-weight: bold;
+  }
   .theme-title {
     font-size: 1.5rem; /* 24px */
     font-weight: bold;
