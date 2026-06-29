@@ -1,6 +1,6 @@
 import { memo } from "react";
-import { STATS } from "../data/home.data";
-import { FadeUp } from "../../../shared/components/FadeUp";
+import { STATS } from "@/features/landing-page/data/home.data";
+import { FadeUp } from "@/shared/components/FadeUp";
 
 const StatsSection = memo(function StatsSection() {
   return (

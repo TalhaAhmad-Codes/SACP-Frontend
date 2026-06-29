@@ -1,7 +1,7 @@
 import { memo } from "react";
 import { ArrowRight } from "lucide-react";
-import { ARCH_STEPS, TECH_TAGS } from "../data/home.data";
-import { FadeUp } from "../../../shared/components/FadeUp";
+import { ARCH_STEPS, TECH_TAGS } from "@/features/landing-page/data/home.data";
+import { FadeUp } from "@/shared/components/FadeUp";
 
 const ArchitectureSection = memo(function ArchitectureSection() {
   return (

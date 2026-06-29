@@ -1,6 +1,6 @@
 
 
-import ContactForm from "./ContactForm";
+import ContactForm from "@/features/landing-page/contact/components/ContactForm";
 
 
 function ContactSection() {

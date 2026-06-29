@@ -1,4 +1,4 @@
-import { useInView } from "../hooks/useInView";
+import { useInView } from "@/shared/hooks/useInView";
 
 // ─── SHARED COMPONENT: FadeUp ─────────────────────────────────────────────────
 // Wraps any content with a scroll-triggered fade-up animation.
