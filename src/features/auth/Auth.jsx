@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Login from "@/features/auth/components/loginComponents/Login";
-import Register from "@/features/auth/components/registerComponents/Register";
+import Login from "@features/auth/components/loginComponents/Login";
+import Register from "@features/auth/components/registerComponents/Register";
 
 const Auth = ({ initialView = "login" }) => {
   // view can be either 'login' or 'register'

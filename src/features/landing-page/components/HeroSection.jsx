@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { Link } from "react-router-dom";
-import { FadeUp } from "@/shared/components/FadeUp";
+import { FadeUp } from "@shared/components/FadeUp";
 
 const HeroSection = memo(function HeroSection() {
   return (
