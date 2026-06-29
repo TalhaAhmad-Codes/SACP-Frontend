@@ -16,7 +16,7 @@ function TeamSection(){
     name: 'Talha',
     role: 'Backend Developer',
     badge: 'BE',
-    description: "Architecting the platform's core logic and database management using .NET Core to ensure high performance.",
+    description: "Founder and Architect of the platform's core logic and database management using .NET Core to ensure high performance.",
   },
   {
     name: 'Areeb',

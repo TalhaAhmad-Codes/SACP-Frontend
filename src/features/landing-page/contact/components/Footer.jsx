@@ -1,7 +1,5 @@
 
 export default function ContactFooter() {
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer className="bg-[#0b1b2d] text-gray-400 py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-6">
@@ -12,7 +10,7 @@ export default function ContactFooter() {
             SACP
           </div>
           <p className="text-xs text-gray-400/80 tracking-wide">
-            &copy; {currentYear} Smart Academic Communication Platform. All rights reserved.
+            &copy; 2026 Smart Academic Communication Platform. All rights reserved.
           </p>
         </div>
 

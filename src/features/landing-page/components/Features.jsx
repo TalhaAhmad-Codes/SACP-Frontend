@@ -1,6 +1,6 @@
 import { memo } from "react";
-import { FEATURES } from "../data/home.data";
-import { FadeUp } from "../../../shared/components/FadeUp";
+import { FEATURES } from "@/features/landing-page/data/home.data";
+import { FadeUp } from "@/shared/components/FadeUp";
 
 const FeatureCard = memo(function FeatureCard({ f }) {
   
