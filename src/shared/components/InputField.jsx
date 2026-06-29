@@ -10,8 +10,8 @@ const InputFields = ({ label, id, name, type, placeholder, register, text }) => 
       className="flex flex-col w-full gap-3 px-1"
     >
       <div className="flex gap-2 items-center">
-        <label htmlFor={id} className="text-Login-Text">{label}</label>
-        <span className="text-gray-500 text-sm">{text}</span>
+        <label htmlFor={id} className=" ">{label}</label>
+        <span className="text-gray-500 text-sm ">{text}</span>
       </div>
 
       {/* 2. Transform the regular input into a motion.input */}

@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import HomePage from "./features/pages/HomePage";
-import AboutPage from "./features/pages/AboutPage";
-import ContactPage from "./features/pages/ContactPage";
+import HomePage from "./features/landing-page/pages/HomePage";
+import AboutPage from "./features/landing-page/pages/AboutPage";
+import ContactPage from "./features/landing-page/pages/ContactPage";
 import Auth from "./features/auth/Auth";
 
 const App = () => {
