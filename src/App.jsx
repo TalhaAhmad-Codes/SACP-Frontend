@@ -7,6 +7,8 @@ import Auth from "./features/auth/Auth";
 
 const App = () => {
   return (
+    <div className="app">
+
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -16,6 +18,7 @@ const App = () => {
         <Route path="/signup" element={<Auth initialView={"register"} />} />
       </Routes>
     </BrowserRouter>
+    </div>
   );
 };
 

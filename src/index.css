@@ -1,8 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "tailwindcss";
+:root{
+  
+}
 
 @theme {
-    --color-Page-background: #F8FAFC;
+
+
+--color-bg-button-hover: #003ea8;
+--color-bg-form-button-hover: #1D4ED8;
+--color-bg-card: #fff;
+--color-bg-form:#fff;
+--color-bg-nav: #fff;
+--color-secondary-background: #1a2a3a;
+--color-bg-features: #f8f9ff;
+--color-bg-footer: #213145;
+--color-bg-form-button: #0066fe;
+--color-bg-button: #004ac6;
+--color-bg-hover-button:#003ea8;
+--color-bg-shadow-button:#004ac6;
+/* main hedaing */
+
+--text-main-heading: 40px;
+--text-main-heading-md: 60px;
+--text-main-heading-lg: 68px;
+/* main hedaing 2*/
+--text-main-heading-2:32px;
+--text-main-heading-2-md: 44px;
+--font-heading: Inter;
+--color-heading:#0b1c30;
+
+    /* --color-Page-background: #F8FAFC;
  --color-Login-Heading: #0B1C30;
  --color-Login-Text: #43474E;
  --color-Login-Button: #1A365D;
@@ -42,12 +70,67 @@
   --spacing-page: var(--spacing-6); /* 1.5rem / 24px */
   --spacing-section: var(--spacing-6); /* 1.5rem / 24px */
   --spacing-card: var(--spacing-4); /* 1rem / 16px */
-  --spacing-form: var(--spacing-3); /* 0.75rem / 12px */
+  --spacing-form: var(--spacing-3);
 }
 
 @layer base {
+  /*Default Theme*/
+  .app{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    color: #434655;
+    background-color: #F8FAFC;
+    font-family: "sans-serif", Poppins;
+  }
+
+  /*Headings*/
+
+  .main-heading-lg{
+    font-size: 4.25rem;/*68px*/
+    color: #0b1c30;
+  }
+  .main-heading-md{
+      font-size: 3.4rem;/*54px*/
+    color: #0b1c30;
+  }
+  .main-heading{
+  @apply text-main-heading md:text-main-heading-md lg:text-main-heading-lg;/*36px*/
+    color: #0b1c30;
+  }
+  .main-heading-2{
+    @apply text-main-heading-2 md:text-main-heading-2-md font-bold  font-heading;
+
+      /* font-size: 2.7rem;36px */
+    color: #0b1c30;
+  }
   
   
+
+  
+  .button{
+    @apply bg-bg-button hover:bg-bg-button-hover text-white font-semibold px-7 py-3.5 rounded-full
+                       transition-all shadow-lg shadow-bg-shadow-button/25 active:scale-1;
+  }
+
+  .form-button{
+    @apply bg-bg-form-button text-white px-5 py-5 rounded-full text-lg font-medium shadow-sm hover:bg-blue-700 transition-all transform active:scale-95 cursor-pointer flex justify-center items-center gap-1;
+    
+  }
+  .label{
+    @apply text-sm font-semibold text-zinc-600
+  }
+.form-field{
+  @apply w-full text-sm px-4 py-3 rounded-lg border focus:border-2 border-gray-300 bg-gray-50/30 focus:outline-none focus:border-blue-500 focus:bg-white resize-none transition-all;
+}
+.password-icon{
+  @apply absolute right-3  h-full flex justify-center items-center  bg-gray-50/30 hover:cursor-pointer ;
+}
+.landing-page{
+
+}
+
   .theme-h1 {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 600;

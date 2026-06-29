@@ -18,11 +18,11 @@ const Student = ({register}) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeIn" }}>
 
-        <label for="department">Degree/Certificate</label>
+        <label for="department" className="label">Degree/Certificate</label>
   
     <select
   
-    id="degree" name="degree"               className="outline-none px-4 py-4 border border-input-border text-gray-400"
+    id="degree" name="degree"               className=" form-field "
 >
       <option value="" disabled selected>Select Degree/Certificate</option>
       <option value="BS"></option>
