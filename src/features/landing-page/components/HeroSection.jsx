@@ -37,8 +37,7 @@ const HeroSection = memo(function HeroSection() {
         {/* CTAs */}
         <FadeUp delay={0.3} className="flex items-center justify-center gap-4 flex-wrap mb-14">
           <Link to="/about"
-            className="bg-[#004ac6] hover:bg-[#003ea8] text-white font-semibold px-7 py-3.5 rounded-full
-                       transition-all shadow-lg shadow-[#004ac6]/25 text-[15px] active:scale-[0.98]">
+            className="button">
             Explore Features
           </Link>
           <Link to="/about"

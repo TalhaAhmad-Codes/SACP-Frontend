@@ -12,20 +12,23 @@ const RightLoginContent = ({ onNavigate }) => {
   };
 
   return (
-    <div className="h-screen flex flex-col flex-1 text-text-body">
+    <div className="h-screen flex flex-col flex-1 ">
       <FormHeader />
 
-      <div className="flex flex-1 justify-center items-center font-login-page Login-Form-Container">
-        <div className="w-full px-6 max-w-md">
-          <h1 className=" font-bold leading-tight theme-form-title text-text-heading">
+      <div className="flex flex-1 justify-center items-center ">
+        <div className="w-full px-6 max-w-md space-y-6">
+          <div>
+
+          <h1 className="main-heading-2 leading-tight ">
             Welcome
           </h1>
-          <p className="text-base theme-badge-text mb-3">
+          <p className="font-medium ">
             Login to your academic workspace
           </p>
+          </div>
 
           <form
-            className="flex flex-col space-form theme-form-stack"
+            className="flex flex-col space-y-6"
             onSubmit={handleSubmit(onSubmit)}
           >
             <InputField
@@ -45,12 +48,12 @@ const RightLoginContent = ({ onNavigate }) => {
           </form>
 
           <div className="flex justify-center items-center space-x-2 mt-7 md:mt-10">
-            <p className="text-center text-Login-Text">
+            <p className="text-center">
               Don't have an account?
             </p>
             <p
               onClick={onNavigate}
-              className="text-Login-Register-Link font-semibold cursor-pointer hover:underline hover:text-blue-600 transition-colors duration-200"
+              className=" font-semibold cursor-pointer hover:underline hover:text-blue-600 transition-colors duration-200"
             >
               Register here
             </p>

@@ -1,9 +1,10 @@
 import Navbar from "@shared/components/Navbar"
-import FooterSection from "@features/landing-page/about/components/FooterSection"
+// import FooterSection from "@features/landing-page/about/components/FooterSection"
 import HeroSection from "@features/landing-page/about/components/HeroSection"
 import PlatfornSection from "@features/landing-page/about/components/PlatformSection"
 import TeamSection from "@features/landing-page/about/components/Team"
 import { FadeUp } from "@shared/components/FadeUp"
+import Footer from "../../../shared/components/Footer"
 
 
 function AboutPage(){
@@ -24,7 +25,7 @@ function AboutPage(){
                 </FadeUp>
 
                 <FadeUp delay={0.15}>
-                    <FooterSection/>
+                    <Footer/>
                 </FadeUp>
                 </main>
 

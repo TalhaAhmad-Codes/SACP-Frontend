@@ -18,7 +18,7 @@ const PasswordInput = ({register, label}) => {
       className="flex flex-col w-full gap-3 px-1"
     >
       <div className="flex gap-2 items-center">
-        <label htmlFor="password" className="text-Login-Text">{label}</label>
+        <label htmlFor="password" className="label">{label}</label>
         
       </div>
 <div className="flex justify-center items-center relative">
@@ -36,9 +36,10 @@ const PasswordInput = ({register, label}) => {
        
         
         // Fixed the typo from 'foucs' to 'focus'
-        className="focus:ring-2 focus:ring-blue-600/80  focus:border-blue-800 outline-none w-full px-4 pr-9 py-4 border border-input-border text-gray-900 transition-colors duration-200 relative"
+        className="form-field"
+        // className="focus:ring-2 focus:ring-blue-600/80  focus:border-blue-800 outline-none w-full px-4 pr-9 py-4 border border-input-border text-gray-900 transition-colors duration-200 relative"
       />
-      <i className="absolute top-5 right-2 hover:cursor-pointer" onClick={handleHide}>{
+      <i className="password-icon" onClick={handleHide}>{
         hide ? <EyeClosed size={20} color="gray"/> : <Eye size={20}color="gray" />
         }</i>
         </div>

@@ -25,18 +25,18 @@ const Faculty = ({register}) => {
         </div>
         
         <div className="flex flex-col gap-5 w-full md:flex-row ">
-       <motion.div className="w-full flex flex-col gap-3 p-1 "
+       <motion.div className="w-full flex flex-col gap-3 p-1"
           initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeIn" }}>
 
-        <label for="department">Department</label>
+        <label for="department" className="label">Department</label>
   
-    <select id="department" name="department"               className=" px-4 py-4 border border-input-border focus:ring-2  focus:ring-blue-800 foucs:border-blue-800 outline-none  text-gray-400 "
+    <select id="department" name="department"               className=" form-field "
 
 >
       <option value="" disabled selected>Select Department</option>
-      <option value="hr" className="selection:bg-gray-100 hover:cursor-pointer ">Human Resources</option>
+      <option value="hr">Human Resources</option>
       <option value="engineering">Engineering</option>
       <option value="marketing">Marketing</option>
     </select>

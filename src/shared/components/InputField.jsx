@@ -10,8 +10,8 @@ const InputFields = ({ label, id, name, type, placeholder, register, text }) => 
       className="flex flex-col w-full gap-3 px-1"
     >
       <div className="flex gap-2 items-center">
-        <label htmlFor={id} className=" ">{label}</label>
-        <span className="text-gray-500 text-sm ">{text}</span>
+        <label htmlFor={id} className="label">{label}</label>
+        <span className="text-gray-500 text-sm">{text}</span>
       </div>
 
       {/* 2. Transform the regular input into a motion.input */}
@@ -26,7 +26,8 @@ const InputFields = ({ label, id, name, type, placeholder, register, text }) => 
        
         t
         // Fixed the typo from 'foucs' to 'focus'
-        className="focus:ring-2 focus:ring-blue-600/80  focus:border-blue-800 outline-none w-full px-4 py-4 border border-input-border text-gray-900 transition-colors duration-200"
+        className="form-field"
+        // className="focus:ring-2 focus:ring-blue-600/80  focus:border-blue-800 outline-none w-full px-4 py-4 border border-input-border text-gray-900 transition-colors duration-200"
       />
     </motion.div>
   );
