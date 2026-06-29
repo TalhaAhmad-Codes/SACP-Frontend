@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import ImageContainer from "../../../../shared/components/ImageContainer";
-import RightLoginContent from "./RightLoginContent";
+import ImageContainer from "@shared/components/ImageContainer";
+import RightLoginContent from "@features/auth/components/loginComponents/RightLoginContent";
 
 const Login = ({ onNavigate }) => {
   const containerVariants = {

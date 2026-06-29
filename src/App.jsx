@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import HomePage from "./features/landing-page/pages/HomePage";
-import AboutPage from "./features/landing-page/pages/AboutPage";
-import ContactPage from "./features/landing-page/pages/ContactPage";
-import Auth from "./features/auth/Auth";
+import HomePage from "@features/landing-page/pages/HomePage";
+import AboutPage from "@features/landing-page/pages/AboutPage";
+import ContactPage from "@features/landing-page/pages/ContactPage";
+import Auth from "@features/auth/Auth";
 
 const App = () => {
   return (

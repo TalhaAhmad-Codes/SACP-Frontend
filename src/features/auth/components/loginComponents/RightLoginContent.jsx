@@ -1,8 +1,8 @@
-import FormHeader from "../../../../shared/components/FormHeader";
+import FormHeader from "@shared/components/FormHeader";
 import { useForm } from "react-hook-form";
-import InputField from "../../../../shared/components/InputField";
-import Button from "../../../../shared/components/Button";
-import PasswordInput from "../../../../shared/components/PasswordInput";
+import InputField from "@shared/components/InputField";
+import Button from "@shared/components/Button";
+import PasswordInput from "@shared/components/PasswordInput";
 
 const RightLoginContent = ({ onNavigate }) => {
   const { register, handleSubmit } = useForm();

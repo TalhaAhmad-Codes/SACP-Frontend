@@ -1,4 +1,4 @@
- import SACP_Logo from "../../assets/SACP_LOGO.svg"  
+ import SACP_Logo from "@assets/SACP_LOGO.svg"  
 const FormHeader = () => {
   return (
      <div className="w-full p-6 lg:relative bg-Page-background ">
