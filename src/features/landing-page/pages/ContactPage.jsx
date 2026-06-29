@@ -2,7 +2,8 @@ import Navbar from "../../../shared/components/Navbar"
 import { FadeUp } from "../../../shared/components/FadeUp"
 
 import ContactSection from "../contact/components/ContactSection"
-import ContactFooter from "../contact/components/Footer"
+// import ContactFooter from "../contact/components/Footer"
+import Footer from "../../../shared/components/Footer"
 
 
 function ContactPage(){
@@ -13,7 +14,7 @@ function ContactPage(){
                     <ContactSection/>
                 </FadeUp>
              <FadeUp>
-                 <ContactFooter/>
+                 <Footer/>
              </FadeUp>
        
 
