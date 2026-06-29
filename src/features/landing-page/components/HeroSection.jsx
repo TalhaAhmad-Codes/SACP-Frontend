@@ -46,6 +46,7 @@ const HeroSection = memo(function HeroSection() {
           <Link to="/about" className="button">
             Explore Features
           </Link>
+<<<<<<< Updated upstream
           <Link
             to="/about"
             className="text-[#004ac6] font-semibold text-[15px] hover:no-underline transition-colors flex items-center gap-1"
@@ -54,6 +55,12 @@ const HeroSection = memo(function HeroSection() {
             <span className="material-symbols-outlined text-[18px] hover:no-underline">
               ▶
             </span>
+=======
+          <Link to="/about"
+            className="text-gray-900  bg-gray-50 font-semibold text-[15px] py-3 px-6 border-gray-200 rounded-2xl shadow-sm transition-all duration-200 hover:bg-gray-100
+            active:scale-[0.99] flex items-center gap-1">
+            Meet the Team
+>>>>>>> Stashed changes
           </Link>
         </FadeUp>
 
