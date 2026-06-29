@@ -20,7 +20,7 @@ const HeroSection = memo(function HeroSection() {
         {/* Headline */}
         <FadeUp delay={0.1} className="text-center mb-5">
           <h1
-            className="text-[40px] md:text-[60px] lg:text-[68px] font-bold leading-tight tracking-tight text-[#0b1c30]"
+            className="text-main-heading md:text-main-heading-md lg:text-main-heading-lg font-bold leading-tight tracking-tight text-heading"
             style={{ fontFamily: "'Newsreader', serif" }}
           >
             Smart Academic
@@ -46,21 +46,11 @@ const HeroSection = memo(function HeroSection() {
           <Link to="/about" className="button">
             Explore Features
           </Link>
-<<<<<<< Updated upstream
           <Link
             to="/about"
             className="text-[#004ac6] font-semibold text-[15px] hover:no-underline transition-colors flex items-center gap-1"
           >
             Meet the Team
-            <span className="material-symbols-outlined text-[18px] hover:no-underline">
-              ▶
-            </span>
-=======
-          <Link to="/about"
-            className="text-gray-900  bg-gray-50 font-semibold text-[15px] py-3 px-6 border-gray-200 rounded-2xl shadow-sm transition-all duration-200 hover:bg-gray-100
-            active:scale-[0.99] flex items-center gap-1">
-            Meet the Team
->>>>>>> Stashed changes
           </Link>
         </FadeUp>
 
@@ -68,9 +58,9 @@ const HeroSection = memo(function HeroSection() {
         <FadeUp delay={0.4}>
           <div className="relative mx-auto max-w-4xl">
             <div className="absolute inset-x-0 bottom-0 h-28 bg-linear-to-t from-white to-transparent z-10 pointer-events-none" />
-            <div className="relative rounded-2xl overflow-hidden border border-[#e2e8f0] shadow-2xl shadow-[#0b1c30]/10">
+            <div className="relative rounded-2xl overflow-hidden border border-border-surface shadow-2xl shadow-heading/10">
               {/* Browser chrome */}
-              <div className="flex items-center gap-2 px-4 py-3 bg-[#213145] border-b border-white/5">
+              <div className="flex items-center gap-2 px-4 py-3 bg-bg-footer border-b border-white/5">
                 <div className="w-3 h-3 rounded-full bg-[#ff5f57]" />
                 <div className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
                 <div className="w-3 h-3 rounded-full bg-[#28ca41]" />
