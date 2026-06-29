@@ -1,5 +1,5 @@
-import Login_Illustration from "@/assets/Login_Illustration.png";
-import image from "@/assets/SignUp_Illustration.png";
+import Login_Illustration from "@assets/Login_Illustration.png";
+import image from "@assets/SignUp_Illustration.png";
 
 export const ImageContainer = () => {
   return (
