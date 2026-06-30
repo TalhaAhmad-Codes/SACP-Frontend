@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { motion, AnimatePresence } from "framer-motion"; // Imported Framer Motion
-import Button from "../../../../shared/components/Button";
+import Button from "@shared/components/Button";
 import Student from "./Student";
 import Faculty from "./Faculty";
-import FormHeader from "../../../../shared/components/TopLogo";
+// import FormHeader from "../../../../shared/components/TopLogo";
 import Admin from "./Admin"; 
 
 

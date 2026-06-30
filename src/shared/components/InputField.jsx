@@ -7,9 +7,9 @@ const InputFields = ({ label, id, name, type, placeholder, register, text }) => 
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeIn" }}
-      className="flex flex-col w-full gap-3 px-1"
+      className="flex flex-col w-full gap-2 px-1"
     >
-      <div className="flex gap-2 items-center">
+      <div className="flex gap-1 items-center">
         <label htmlFor={id} className="label">{label}</label>
         <span className="text-gray-500 text-sm">{text}</span>
       </div>
