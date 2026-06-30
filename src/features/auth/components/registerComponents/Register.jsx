@@ -1,46 +1,169 @@
-import { motion } from "framer-motion"; // 1. Imported Framer Motion
-import { ImageContainer2 } from "../../../../shared/components/ImageContainer";
-import RightRegisterContent from "./RightRegisterContent";
+import { useState, useEffect } from "react";
+import { useForm } from "react-hook-form";
+import { motion, AnimatePresence } from "framer-motion"; // Imported Framer Motion
+import Button from "../../../../shared/components/Button";
+import Student from "./Student";
+import Faculty from "./Faculty";
+import FormHeader from "../../../../shared/components/TopLogo";
+import Admin from "./Admin"; 
 
-export default function Register({ onNavigate }) {
-  // Stagger container to orchestrate the entry of the left form and right image
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15, // Delay between form showing up and image showing up
-        delayChildren: 0.1,
-      },
-    },
+
+const RightRegisterContent = ({ onNavigate }) => {
+  const [activeRole, setActiveRole] = useState("Student"); 
+  
+  const { register, handleSubmit, setValue } = useForm({
+    defaultValues: {
+      role: "Student",
+    }
+  });
+
+  useEffect(() => {
+    setValue("role", activeRole);
+  }, [activeRole, setValue]);
+
+  const onSubmit = (data) => {
+    console.log("Registered Form Data:", data); 
   };
 
-  const itemVariantsLeft = {
-    hidden: { opacity: 0, x: -30 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  // Simplified: Extracted the active background styles out since motion handles it now
+  const getButtonClass = (role) => {
+    const baseClass = "relative z-10 w-full md:px-17 rounded-sm transition-colors duration-200 text-sm font-medium text-center p-2 cursor-pointer";
+    const activeClass = "text-black ";
+    const inactiveClass = "text-gray-500 hover:text-gray-900 hover:font-bold text-center shrink-1 p-2";
+    
+    return `${baseClass} ${activeRole === role ? activeClass : inactiveClass}`;
   };
 
-  const itemVariantsRight = {
-    hidden: { opacity: 0, x: 30 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  const renderRoleFields = () => {
+    // Wrapping each case in a motion element to handle slide/fade animations on change
+    switch (activeRole) {
+      case "Student":
+        return (
+          <motion.div
+            key="student"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
+            transition={{ duration: 0.2 }}
+          >
+            <Student register={register} />
+          </motion.div>
+        );
+      case "Faculty":
+        return (
+          <motion.div
+            key="faculty"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
+            transition={{ duration: 0.2 }}
+          >
+            <Faculty register={register} />
+          </motion.div>
+        );
+      case "Admin":
+        return (
+          <motion.div
+            key="admin"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
+            transition={{ duration: 0.2 }}
+          >
+            <Admin register={register}/>
+          </motion.div>
+        );
+      default:
+        return null;
+    }
   };
 
   return (
-    <motion.div 
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-      className="grid grid-cols-1 lg:grid-cols-[60%_1fr] w-full max-h-screen place-items-center display-grid"
-    >
-      {/* 2. Form panel wraps and slides smoothly in from the left */}
-      <motion.div variants={itemVariantsLeft} className=" h-full w-full display-full">
-        <RightRegisterContent onNavigate={onNavigate} />
-      </motion.div>
+    // 1. Smoothly fade the entire view on page enter
+    
+      
+ <div className="md:bg-white/10  bg-transparent sm:backdrop-blur-lg sm:border sm:border-gray-200 space-y-6 w-full sm:w-lg lg:w-xl sm:py-10 sm:px-8 rounded-2xl sm:shadow-xl">          <h1 className="main-heading-2 mb-2 font-bold leading-tight">
+            Create an Account
+          </h1> 
+          
+          <p className=" mb-6 ">
+            Join the Smart Academic Communication Platform workspace.
+          </p>
 
-      {/* 3. Marketing Image wrapper smoothly glides in from the right */}
-      <motion.div variants={itemVariantsRight} className="w-full h-full justify-center hidden lg:block login-sidebar-image image2">
-        <ImageContainer2 />
-      </motion.div>
-    </motion.div>
+          <form className="box-border flex flex-col gap-1 w-full space-y-4" onSubmit={handleSubmit(onSubmit)}>
+
+            {/* Role Selection Tabs */}
+            <div className="relative grid grid-cols-3 place-items-center bg-role-box border p-1 border-role-box-border rounded-md mb-1 ">
+              
+              {/* ADMIN BUTTON */}
+              <button 
+                type="button" 
+                className={getButtonClass("Admin")} 
+                onClick={() => setActiveRole("Admin")}
+              >
+                {activeRole === "Admin" && (
+                  <motion.div 
+                    layoutId="activeTabPill"
+                    className="absolute inset-0 bg-white border border-role-box-border shadow-md rounded-sm -z-10"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
+                Admin
+              </button>
+
+              {/* FACULTY BUTTON */}
+              <button 
+                type="button" 
+                className={getButtonClass("Faculty")} 
+                onClick={() => setActiveRole("Faculty")}
+              >
+                {activeRole === "Faculty" && (
+                  <motion.div 
+                    layoutId="activeTabPill"
+                    className="absolute inset-0 bg-white border border-role-box-border shadow-md rounded-sm -z-10"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
+                Faculty
+              </button>
+
+              {/* STUDENT BUTTON */}
+              <button 
+                type="button" 
+                className={getButtonClass("Student")} 
+                onClick={() => setActiveRole("Student")}
+              >
+                {activeRole === "Student" && (
+                  <motion.div 
+                    layoutId="activeTabPill"
+                    className="absolute inset-0 bg-white border border-role-box-border shadow-md rounded-sm -z-10"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
+                Student
+              </button>
+            </div>
+
+            {/* 2. AnimatePresence lets components animate out before a new one animates in */}
+            <div className="overflow-hidden py-2">
+              <AnimatePresence mode="wait">
+                {renderRoleFields()}
+              </AnimatePresence>
+            </div>
+  
+            <Button label={`Create ${activeRole} Account`}/>
+          </form>
+
+          <p className="text-center mt-10 text-sm">
+            Already have an account?
+            <span onClick={onNavigate} className=" font-semibold cursor-pointer hover:underline hover:text-blue-600 transition-colors duration-200 ml-2">
+              Login here
+            </span>
+          </p>
+
+        </div>
+        
   );
-}
+};
+
+export default RightRegisterContent;
