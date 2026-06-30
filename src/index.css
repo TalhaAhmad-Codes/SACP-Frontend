@@ -1,7 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "tailwindcss";
-:root{
-  
+
+
+.dot-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.dot-grid__wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.dot-grid__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
 @theme {
@@ -30,6 +51,14 @@
 --font-heading: Inter;
 --color-heading:#0b1c30;
 
+/*for role box admin, faculty, student*/
+--color-role-box: #EFF4FF;
+--color-role-box-border: #C4C6CF;
+
+/* widths */
+
+--text-form-box-width: 600px;
+
     /* --color-Page-background: #F8FAFC;
  --color-Login-Heading: #0B1C30;
  --color-Login-Text: #43474E;
@@ -39,10 +68,6 @@
 --color-input-border: #C4C6CF;
 
 
-/*Landing Page -> HomePage -> */
---color-role-box: #EFF4FF;
---color-role-box-border: #C4C6CF;
-  /* Main Theme Colors */
     --color-button-background: #004ac6;
 
   --color-main-brand: #2563eb;
@@ -57,20 +82,17 @@
   --color-input-background: #f1f5f9;
   --color-border-surface: #e2e8f0;
 
-  --color-active: #16a34a; /* Success */
-  --color-warning: #d97706; /* Medium Priority */
-  --color-critical: #dc2626; /* High Priority / Urgent */
-  --color-inactive: #6b7280; /* Low Priority */
+  --color-active: #16a34a; 
+  --color-warning: #d97706; 
+  --color-critical: #dc2626; 
+  --color-inactive: #6b7280; 
 
   --color-text-heading: #0f172a;
   --color-text-body: #334155;
   --color-text-label: #64748b;
   --color-text-placeholder: #94a3b8;
 
-  --spacing-page: var(--spacing-6); /* 1.5rem / 24px */
-  --spacing-section: var(--spacing-6); /* 1.5rem / 24px */
-  --spacing-card: var(--spacing-4); /* 1rem / 16px */
-  --spacing-form: var(--spacing-3);
+*/
 }
 
 @layer base {
@@ -87,14 +109,6 @@
 
   /*Headings*/
 
-  .main-heading-lg{
-    font-size: 4.25rem;/*68px*/
-    color: #0b1c30;
-  }
-  .main-heading-md{
-      font-size: 3.4rem;/*54px*/
-    color: #0b1c30;
-  }
   .main-heading{
   @apply text-main-heading md:text-main-heading-md lg:text-main-heading-lg;/*36px*/
     color: #0b1c30;
@@ -128,8 +142,10 @@
   @apply absolute right-3  h-full flex justify-center items-center  bg-gray-50/30 hover:cursor-pointer ;
 }
 .landing-page{
-
+/**/
 }
+
+/*
 
   .theme-h1 {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -144,47 +160,48 @@
   .theme-h3 {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 400;
-  }
+  }*/
 }
-
+/*
 @layer components {
-  /* 1. Font & spacing (Fixed em units to rem) */
+  1. Font & spacing (Fixed em units to rem) */
+  /*
   .theme-form-title{
     font-size: 3rem;
     font-weight: bold;
   }
   .theme-title {
-    font-size: 1.5rem; /* 24px */
+    font-size: 1.5rem; 
     font-weight: bold;
   }
 
   .theme-section-title {
-    font-size: 1.125rem; /* 18px */
+    font-size: 1.125rem; 
     font-weight: bold;
   }
 
   .theme-card-title {
-    font-size: 1rem; /* 16px */
+    font-size: 1rem; 
     font-weight: 600;
   }
 
   .theme-body-heading {
-    font-size: 0.875rem; /* 14px */
+    font-size: 0.875rem; 
     font-weight: 600;
   }
 
   .theme-body-text {
-    font-size: 0.75rem; /* 12px */
+    font-size: 0.75rem;
     font-weight: 400;
   }
 
   .theme-label-text {
-    font-size: 0.6875rem; /* 11px */
+    font-size: 0.6875rem; 
     font-weight: 500;
   }
 
   .theme-badge-text {
-    font-size: 0.625rem; /* 10px */
+    font-size: 0.625rem; 
     font-weight: 500;
   }
 
@@ -204,7 +221,7 @@
     @apply space-y-3;
   }
 
-  /* Inline gaps */
+  /* Inline gaps 
   .theme-inline-gap-2 {
     @apply flex items-center gap-2;
   }
@@ -213,12 +230,12 @@
     @apply flex items-center gap-3;
   }
 
-  /* Table cell padding */
+  /* Table cell padding 
   .theme-table-custom-cell {
     @apply px-4 py-3;
   }
 
-  /* 2. Sidebar Layout */
+  /* 2. Sidebar Layout *//*
   .theme-sidebar-open {
     @apply w-64 bg-white border-r border-slate-200 transition-all duration-300 ease-in-out;
   }
@@ -239,7 +256,7 @@
     @apply w-5 h-5;
   }
 
-  /* 3. Badges (Fixed Tailind v4 unknown utility compilation issue) */
+  /* 3. Badges (Fixed Tailind v4 unknown utility compilation issue) *//*
   .theme-badge,
   .theme-badge-active,
   .theme-badge-warning,
@@ -249,7 +266,7 @@
     @apply text-xs px-2.5 py-0.5 rounded-full border font-medium inline-flex items-center justify-center;
   }
 
-  /* Badge Variants */
+  /* Badge Variants *//*
   .theme-badge-active {
     @apply bg-green-100 text-green-700 border-green-200;
   }
@@ -270,7 +287,7 @@
     @apply bg-slate-100 text-slate-500 border-slate-200;
   }
 
-  /* 4. Table Style */
+  /* 4. Table Style *//*
   .theme-table-header {
     @apply bg-slate-50 text-slate-500 text-xs uppercase tracking-wider;
   }
@@ -287,7 +304,7 @@
     @apply px-4 py-3 text-sm;
   }
 
-  /* 5. Notifications */
+  /* 5. Notifications *//*
   .theme-notification-urgent {
     @apply bg-red-100 text-red-700;
   }
@@ -304,7 +321,7 @@
     @apply bg-slate-100 text-slate-500;
   }
 
-  /* 6. Shadows */
+  /* 6. Shadows *//*
   .theme-shadow-card {
     @apply shadow-sm;
   }
@@ -321,16 +338,16 @@
     @apply shadow-sm;
   }
 
-  /* 7. Border Radius */
+  /* 7. Border Radius *//*
   .theme-radius-button,
   .theme-radius-input {
-    @apply rounded-xl; /* 12px */
+    @apply rounded-xl; 
   }
-
+/*
   .theme-radius-card {
-    @apply rounded-2xl; /* 16px */
+    @apply rounded-2xl; 
   }
-
+/*
   .theme-radius-badge,
   .theme-radius-avatar {
     @apply rounded-full;
@@ -345,7 +362,7 @@
   .image2 {
     min-height: 100%;
   }
-}
+}*/
 
 /* Hide the illustration when the viewport height is 600px or less */
 @media (max-height: 600px) {

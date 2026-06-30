@@ -16,7 +16,7 @@ import { Link, NavLink } from 'react-router-dom';
       : "block text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-md";
 
   return (
-    <nav className="w-full bg-white border-b  border-gray-100 font-sans">        
+    <nav className="w-full bg-white border-b  border-gray-100 ">        
      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">

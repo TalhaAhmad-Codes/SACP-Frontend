@@ -1,6 +1,6 @@
-import InputField from "../../../../shared/components/InputField"
+import InputField from "@shared/components/InputField"
 import {motion} from "framer-motion"
-import PasswordInput from "../../../../shared/components/PasswordInput";
+import PasswordInput from "@shared/components/PasswordInput";
 const Faculty = ({register}) => {
   return (
     <div className="flex flex-col gap-5">
@@ -53,7 +53,7 @@ const Faculty = ({register}) => {
         </div>
         <InputField
             label={"Access Code"}
-            placeholder={"Enter alphanumeric code"}
+            placeholder={"DEPX-N-YYYY"}
             name={"access code"}
             id={"access-code"}
             type={"text"}
