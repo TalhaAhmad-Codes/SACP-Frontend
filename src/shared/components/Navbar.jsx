@@ -48,7 +48,7 @@ import { Link, NavLink } from 'react-router-dom';
             </Link>
             <Link 
               to="/signup" 
-              className="bg-[#0066fe] text-white px-5 py-2.5 rounded-full text-sm font-medium shadow-sm hover:bg-blue-700 transition-all transform active:scale-95"
+              className="bg-bg-form-button text-white px-4 py-1.5 rounded-full text-sm font-medium shadow-sm hover:bg-blue-700 transition-all transform active:scale-95"
             >
               Sign Up
             </Link>
@@ -102,7 +102,7 @@ import { Link, NavLink } from 'react-router-dom';
             <Link 
               to="/signup" 
               onClick={() => setIsOpen(false)}
-              className="block text-center bg-[#0066fe] text-white px-4 py-2.5 rounded-full text-base font-medium shadow-sm"
+              className="block text-center bg-bg-form-button text-white px-4 py-1.5 rounded-full text-base font-medium shadow-sm"
             >
               Sign Up
             </Link>

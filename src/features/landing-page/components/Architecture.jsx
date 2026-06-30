@@ -6,9 +6,9 @@ import { FadeUp } from "@shared/components/FadeUp";
 const ArchitectureSection = memo(function ArchitectureSection() {
   return (
     <section className="py-20 px-4 md:px-6 bg-white">
-      <div className="max-w-[1200px] mx-auto">
+      <div className="max-w-300 mx-auto">
         <FadeUp className="text-center mb-14">
-          <h2 className="text-[32px] md:text-[42px] font-bold text-[#0b1c30] mb-3"
+          <h2 className="text-main-heading-2 md:text-main-heading-2-md font-bold text-heading mb-3"
             style={{ fontFamily: "'Newsreader', serif" }}>Platform Architecture</h2>
           <p className="text-[16px] text-[#434655]">How our intelligent engine powers institutional communication</p>
         </FadeUp>
@@ -20,10 +20,10 @@ const ArchitectureSection = memo(function ArchitectureSection() {
             return (
               <div key={step.id} className="flex items-center">
                 <div className="flex flex-col items-center gap-2">
-                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-all
+                  <div className={`w-11 h-11 md:w-14 md:h-14 rounded-2xl flex items-center justify-center transition-all
                     ${step.active ? "bg-[#004ac6] shadow-lg shadow-[#004ac6]/30 scale-110" : "bg-[#e5eeff] border border-[#c3d9ff]"}`}>
                     <Icon
-                      className={`w-6 h-6 ${step.active ? "text-white" : "text-[#004ac6]"}`}
+                      className={`w-5 h-5 md:w-6 md:h-6 ${step.active ? "text-white" : "text-[#004ac6]"}`}
                       strokeWidth={2}
                     />
                   </div>
@@ -42,8 +42,8 @@ const ArchitectureSection = memo(function ArchitectureSection() {
 
         {/* Tech card */}
         <FadeUp delay={0.2}>
-          <div className="bg-[#1a2a3a] rounded-2xl p-6 md:p-8 grid md:grid-cols-2 gap-6 items-center">
-            <div>
+          <div className="bg-secondary-background rounded-2xl p-6 md:p-8 grid md:grid-cols-2 gap-6 items-center min-w-0">
+            <div className="min-w-0">
               <h3 className="text-[24px] font-bold text-white mb-4" style={{ fontFamily: "'Newsreader', serif" }}>
                 Technical Foundation
               </h3>
@@ -53,14 +53,14 @@ const ArchitectureSection = memo(function ArchitectureSection() {
                 ))}
               </div>
             </div>
-            <div className="bg-[#0f1e2e] rounded-xl p-5 border border-white/5">
+            <div className="bg-[#0f1e2e] rounded-xl p-5 border border-white/5 min-w-0 w-full max-w-full">
               <div className="flex items-center gap-1.5 mb-3">
                 <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
                 <div className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
                 <div className="w-2.5 h-2.5 rounded-full bg-[#28ca41]" />
                 <span className="ml-2 text-[11px] text-white/30 font-mono">CommunicationHub.cs</span>
               </div>
-              <pre className="text-[12px] leading-relaxed overflow-x-auto" style={{ fontFamily:"'JetBrains Mono',monospace" }}>
+              <pre className="text-[12px] leading-relaxed overflow-x-auto max-w-full" style={{ fontFamily:"'JetBrains Mono',monospace" }}>
                 <span className="text-white/40">{"// SACP Rule Engine\n"}</span>
                 <span className="text-[#7dd3fc]">{"public class "}</span>
                 <span className="text-[#fde047]">{"CommunicationHub "}</span>

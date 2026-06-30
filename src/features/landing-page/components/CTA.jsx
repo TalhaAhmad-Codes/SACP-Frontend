@@ -4,11 +4,11 @@ import { FadeUp } from "@shared/components/FadeUp";
 
 const CTASection = memo(function CTASection() {
   return (
-    <section className="py-20 px-4 md:px-6 bg-[#f8f9ff]">
+    <section className="py-20 px-4 md:px-6 bg-bg-features">
       <div className="max-w-300 mx-auto">
         <FadeUp>
-          <div className="bg-white border border-[#e2e8f0] rounded-3xl px-8 py-16 text-center shadow-sm">
-            <h2 className="text-[32px] md:text-[42px] font-bold text-[#0b1c30] mb-4"
+          <div className="bg-white border border-border-surface rounded-3xl px-8 py-16 text-center shadow-sm">
+            <h2 className="text-main-heading-2 md:text-main-heading-2-md font-bold text-heading mb-4"
               style={{ fontFamily: "'Newsreader', serif" }}>
               Ready to Transform Your Institution?
             </h2>
