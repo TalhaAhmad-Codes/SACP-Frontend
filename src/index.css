@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "tailwindcss";
 
-
 .dot-grid {
   display: flex;
   align-items: center;
@@ -26,40 +25,38 @@
 }
 
 @theme {
+  --color-bg-button-hover: #003ea8;
+  --color-bg-form-button-hover: #1d4ed8;
+  --color-bg-card: #fff;
+  --color-bg-form: #fff;
+  --color-bg-nav: #fff;
+  --color-secondary-background: #1a2a3a;
+  --color-bg-features: #f8f9ff;
+  --color-bg-footer: #213145;
+  --color-bg-form-button: #0066fe;
+  --color-bg-button: #004ac6;
+  --color-bg-hover-button: #003ea8;
+  --color-bg-shadow-button: #004ac6;
+  /* main hedaing */
 
+  --text-main-heading: 40px;
+  --text-main-heading-md: 60px;
+  --text-main-heading-lg: 68px;
+  /* main hedaing 2*/
+  --text-main-heading-2: 32px;
+  --text-main-heading-2-md: 44px;
+  --font-heading: Inter;
+  --color-heading: #0b1c30;
 
---color-bg-button-hover: #003ea8;
---color-bg-form-button-hover: #1D4ED8;
---color-bg-card: #fff;
---color-bg-form:#fff;
---color-bg-nav: #fff;
---color-secondary-background: #1a2a3a;
---color-bg-features: #f8f9ff;
---color-bg-footer: #213145;
---color-bg-form-button: #0066fe;
---color-bg-button: #004ac6;
---color-bg-hover-button:#003ea8;
---color-bg-shadow-button:#004ac6;
-/* main hedaing */
+  /*for role box admin, faculty, student*/
+  --color-role-box: #eff4ff;
+  --color-role-box-border: #c4c6cf;
 
---text-main-heading: 40px;
---text-main-heading-md: 60px;
---text-main-heading-lg: 68px;
-/* main hedaing 2*/
---text-main-heading-2:32px;
---text-main-heading-2-md: 44px;
---font-heading: Inter;
---color-heading:#0b1c30;
+  /* widths */
 
-/*for role box admin, faculty, student*/
---color-role-box: #EFF4FF;
---color-role-box-border: #C4C6CF;
+  --text-form-box-width: 600px;
 
-/* widths */
-
---text-form-box-width: 600px;
-
-    /* --color-Page-background: #F8FAFC;
+  /* --color-Page-background: #F8FAFC;
  --color-Login-Heading: #0B1C30;
  --color-Login-Text: #43474E;
  --color-Login-Button: #1A365D;
@@ -97,55 +94,50 @@
 
 @layer base {
   /*Default Theme*/
-  .app{
-    padding:0px;
-    margin:0px;
+  .app {
+    padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
     font-size: 1rem;
     color: #434655;
-    background-color: #F8FAFC;
+    background-color: #f8fafc;
     font-family: "sans-serif", Poppins;
   }
 
   /*Headings*/
 
-  .main-heading{
-  @apply text-main-heading md:text-main-heading-md lg:text-main-heading-lg;/*36px*/
+  .main-heading {
+    @apply text-main-heading md:text-main-heading-md lg:text-main-heading-lg; /*36px*/
     color: #0b1c30;
   }
-  .main-heading-2{
+  .main-heading-2 {
     @apply text-main-heading-2 md:text-main-heading-2-md font-bold  font-heading;
 
-      /* font-size: 2.7rem;36px */
+    /* font-size: 2.7rem;36px */
     color: #0b1c30;
   }
-  
-  
 
-  
-  .button{
-    @apply bg-bg-button hover:bg-bg-button-hover text-white font-semibold px-7 py-3.5 rounded-full
-                       transition-all shadow-lg shadow-bg-shadow-button/25 active:scale-1;
+  .button {
+    @apply bg-bg-button hover:bg-bg-button-hover text-white font-semibold px-7 py-3.5 rounded-full transition-all shadow-lg shadow-bg-shadow-button/25 active:scale-1;
   }
 
-  .form-button{
+  .form-button {
     @apply bg-bg-form-button text-white px-5 py-5 rounded-full text-lg font-medium shadow-sm hover:bg-blue-700 transition-all transform active:scale-95 cursor-pointer flex justify-center items-center gap-1;
-    
   }
-  .label{
-    @apply text-sm font-semibold text-zinc-600
+  .label {
+    @apply text-sm font-semibold text-zinc-600;
   }
-.form-field{
-  @apply w-full text-sm px-4 py-3 rounded-lg border focus:border-2 border-gray-300 bg-gray-50/30 focus:outline-none focus:border-blue-500 focus:bg-white resize-none transition-all;
-}
-.password-icon{
-  @apply absolute right-3  h-full flex justify-center items-center  bg-gray-50/30 hover:cursor-pointer ;
-}
-.landing-page{
-/**/
-}
+  .form-field {
+    @apply w-full text-sm px-4 py-3 rounded-lg border focus:border-2 border-gray-300 bg-gray-50/30 focus:outline-none focus:border-blue-500 focus:bg-white resize-none transition-all;
+  }
+  .password-icon {
+    @apply absolute right-3  h-full flex justify-center items-center  bg-gray-50/30 hover:cursor-pointer;
+  }
+  .landing-page {
+    /**/
+  }
 
-/*
+  /*
 
   .theme-h1 {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -165,7 +157,7 @@
 /*
 @layer components {
   1. Font & spacing (Fixed em units to rem) */
-  /*
+/*
   .theme-form-title{
     font-size: 3rem;
     font-weight: bold;
@@ -235,7 +227,7 @@
     @apply px-4 py-3;
   }
 
-  /* 2. Sidebar Layout *//*
+  /* 2. Sidebar Layout */ /*
   .theme-sidebar-open {
     @apply w-64 bg-white border-r border-slate-200 transition-all duration-300 ease-in-out;
   }
@@ -256,7 +248,7 @@
     @apply w-5 h-5;
   }
 
-  /* 3. Badges (Fixed Tailind v4 unknown utility compilation issue) *//*
+  /* 3. Badges (Fixed Tailind v4 unknown utility compilation issue) */ /*
   .theme-badge,
   .theme-badge-active,
   .theme-badge-warning,
@@ -266,7 +258,7 @@
     @apply text-xs px-2.5 py-0.5 rounded-full border font-medium inline-flex items-center justify-center;
   }
 
-  /* Badge Variants *//*
+  /* Badge Variants */ /*
   .theme-badge-active {
     @apply bg-green-100 text-green-700 border-green-200;
   }
@@ -287,7 +279,7 @@
     @apply bg-slate-100 text-slate-500 border-slate-200;
   }
 
-  /* 4. Table Style *//*
+  /* 4. Table Style */ /*
   .theme-table-header {
     @apply bg-slate-50 text-slate-500 text-xs uppercase tracking-wider;
   }
@@ -304,7 +296,7 @@
     @apply px-4 py-3 text-sm;
   }
 
-  /* 5. Notifications *//*
+  /* 5. Notifications */ /*
   .theme-notification-urgent {
     @apply bg-red-100 text-red-700;
   }
@@ -321,7 +313,7 @@
     @apply bg-slate-100 text-slate-500;
   }
 
-  /* 6. Shadows *//*
+  /* 6. Shadows */ /*
   .theme-shadow-card {
     @apply shadow-sm;
   }
@@ -338,7 +330,7 @@
     @apply shadow-sm;
   }
 
-  /* 7. Border Radius *//*
+  /* 7. Border Radius */ /*
   .theme-radius-button,
   .theme-radius-input {
     @apply rounded-xl; 

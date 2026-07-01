@@ -2,24 +2,24 @@ function TeamSection() {
   const teamMembers = [
     {
       name: "Talha Ahmad",
-      role: "Backend Developer",
+      role: "Founder & Backend Developer",
       badge: "BE",
       description:
-        "Founder and Architect of the platform's core logic and database management using .NET Core to ensure high performance.",
+        "Founder and main architect of the platform's core logic and database management using .NET Core to ensure high performance.",
     },
     {
       name: "Hafiz Muhammad Raza",
-      role: "Frontend Developer",
+      role: "Frontend Developer I",
       badge: "FE",
       description:
-        "Responsible for building the user interface and ensuring a seamless experience using React and Tailwind CSS.",
+        "Responsible for building modern, clean, and responsive user interfaces and ensuring a seamless experience using React and Tailwind CSS.",
     },
     {
       name: "Furqan Moin",
-      role: "Frontend Developer",
+      role: "Frontend Developer II",
       badge: "FE",
       description:
-        "Crafting responsive and interactive components with React and Tailwind CSS for a modern user journey.",
+        "Focusing on accessibility and responsive design principles on the top of auth and real-time services layers.",
     },
     {
       name: "Areeb Siddiqui",
@@ -38,7 +38,7 @@ function TeamSection() {
             {teamMembers.map((member, index) => (
               <div
                 key={index}
-                className="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between"
+                className="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between text-justify"
               >
                 <div>
                   <div className="flex items-center justify-between mb-1">
