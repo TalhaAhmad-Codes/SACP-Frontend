@@ -122,7 +122,7 @@
   }
 
   .form-button {
-    @apply bg-bg-form-button text-white px-5 py-5 rounded-full text-lg font-medium shadow-sm hover:bg-blue-700 transition-all transform active:scale-95 cursor-pointer flex justify-center items-center gap-1;
+    @apply bg-bg-form-button text-white py-2 rounded-lg text-lg  text-center font-medium shadow-lg hover:bg-blue-700 transition-all transform active:scale-95 cursor-pointer flex justify-center items-center gap-1;
   }
   .label {
     @apply text-sm font-semibold text-zinc-600;
