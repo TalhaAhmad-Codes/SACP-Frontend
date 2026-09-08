@@ -2,22 +2,28 @@ import { memo } from "react";
 import { Link } from "react-router-dom";
 import { FadeUp } from "@shared/components/FadeUp";
 
+// Call to action - Home Page
 const CTASection = memo(function CTASection() {
   return (
     <section className="py-20 px-4 md:px-6 bg-bg-features">
       <div className="max-w-300 mx-auto">
         <FadeUp>
           <div className="bg-white border border-border-surface rounded-3xl px-8 py-16 text-center shadow-sm">
-            <h2 className="text-main-heading-2 md:text-main-heading-2-md font-bold text-heading mb-4"
-              style={{ fontFamily: "'Newsreader', serif" }}>
+            <h2
+              className="text-main-heading-2 md:text-main-heading-2-md font-bold text-heading mb-4"
+              style={{ fontFamily: "'Newsreader', serif" }}
+            >
               Ready to Transform Your Institution?
             </h2>
             <p className="text-[16px] text-[#434655] max-w-xl mx-auto mb-8 leading-relaxed">
-              Join the future of academic communication. Deploy SACP and experience intelligent automation.
+              Join the future of academic communication. Deploy SACP and
+              experience intelligent automation.
             </p>
-            <Link to="/contact"
+            <Link
+              to="/contact"
               className="inline-block bg-[#004ac6] hover:bg-[#003ea8] text-white font-bold
-                         px-10 py-4 rounded-full text-[16px] transition-all shadow-lg shadow-[#004ac6]/25 active:scale-[0.98]">
+                         px-10 py-4 rounded-full text-[16px] transition-all shadow-lg shadow-[#004ac6]/25 active:scale-[0.98]"
+            >
               Get Started Now
             </Link>
           </div>

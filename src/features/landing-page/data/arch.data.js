@@ -1,4 +1,3 @@
-
 import { CalendarDays, GitFork, Bot, Send, LineChart } from "lucide-react";
 
 export const ARCH_STEPS = [
