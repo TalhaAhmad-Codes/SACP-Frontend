@@ -25,7 +25,7 @@ function ContactSection() {
        
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-12 flex justify-center">
             <div className="w-full h-full bg-gray-50/50 p-6 rounded-2xl">
               <ContactForm />
             </div>
