@@ -14,7 +14,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto lg:mx-0 flex justify-center items-center ">
+    <div className="w-full max-w-2xl mx-auto flex justify-center items-center ">
       <form 
         onSubmit={handleSubmit} 
         className="max-w-2xl mx-auto bg-white border border-gray-200/60 rounded-2xl p-6 sm:p-8 shadow-lg"
