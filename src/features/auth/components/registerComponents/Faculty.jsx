@@ -25,7 +25,7 @@ const Faculty = ({register}) => {
         </div>
         
         <div className="flex flex-col gap-5 w-full md:flex-row ">
-       <motion.div className="w-full flex flex-col gap-3 p-1"
+       <motion.div className="w-full flex flex-col gap-3"
           initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeIn" }}>
