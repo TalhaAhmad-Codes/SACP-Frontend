@@ -27,7 +27,7 @@ const RightRegisterContent = ({ onNavigate }) => {
 
   // Simplified: Extracted the active background styles out since motion handles it now
   const getButtonClass = (role) => {
-    const baseClass = "relative z-10 w-full md:px-17 rounded-sm transition-colors duration-200 text-sm font-medium text-center p-2 cursor-pointer";
+    const baseClass = "relative z-10 w-full rounded-sm transition-colors duration-200 text-sm font-medium text-center p-2 cursor-pointer";
     const activeClass = "text-black ";
     const inactiveClass = "text-gray-500 hover:text-gray-900 hover:font-bold text-center shrink-1 p-2";
     
