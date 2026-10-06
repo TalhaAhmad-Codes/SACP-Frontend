@@ -4,10 +4,7 @@ import { FadeUp } from "@shared/components/FadeUp";
 
 const HeroSection = memo(function HeroSection() {
   return (
-    <section className="relative bg-white pt-16 pb-0 px-4 md:px-6 overflow-hidden">
-      {/* Radial glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%50%_at_50%-10%,rgba(0,74,198,0.07),transparent)] pointer-events-none" />
-
+    <section className="relative overflow-hidden py-20 md:py-28">
       <div className="max-w-300 mx-auto relative">
         {/* Badge */}
         <FadeUp delay={0} className="flex justify-center mb-6">
@@ -43,9 +40,11 @@ const HeroSection = memo(function HeroSection() {
           delay={0.3}
           className="flex items-center justify-center gap-4 flex-wrap mb-14"
         >
-          <Link to="/about" className="button">
+
+          
+          <button  className="button">
             Explore Features
-          </Link>
+          </button>
           <Link
             to="/about"
             className="text-[#004ac6] font-semibold text-[15px] hover:no-underline transition-colors flex items-center gap-1"
