@@ -1,4 +1,4 @@
-export departmentResponseMap=(data)=>({
+export const departmentResponseMap=(data)=>({
     id: data.id,
     name:data.name,
     institution_id: data.institution_id,
@@ -6,7 +6,7 @@ export departmentResponseMap=(data)=>({
     description: data.description
 })
 
-export departmentPageResponseMap=(data)=>{
-    item: data.items.map(departmentMapResponse),
+export const  departmentPageResponseMap=(data)=>({
+    item: data.items.map(departmentResponseMap),
     total: data.totalCount
-}
+})

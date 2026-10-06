@@ -3,7 +3,7 @@ export const institutionResponseMap=(data)=>({
    name: data.name,
 })
 
-export const institutionPageResponseMap=(data)=>{
-  item: data.items.map(userResponseMap),
-  total: data.totalCount
-}
+export const institutionPageResponseMap=(data)=>({
+  item: data.items.map(institutionResponseMap),
+  total: data.totalCount,
+})
