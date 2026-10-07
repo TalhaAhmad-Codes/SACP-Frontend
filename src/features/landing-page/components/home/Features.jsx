@@ -58,7 +58,10 @@ const FeatureCard = memo(function FeatureCard({ f }) {
 
 const FeaturesSection = memo(function FeaturesSection() {
   return (
-    <section id="features" className="scroll-mt-20 py-20 px-4 md:px-6 bg-bg-features">
+    <section
+      id="features"
+      className="scroll-mt-20 py-20 px-4 md:px-6 bg-bg-features"
+    >
       <div className="max-w-300 mx-auto">
         <FadeUp className="text-center mb-14">
           <h2

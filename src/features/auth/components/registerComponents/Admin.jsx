@@ -13,7 +13,7 @@ const Admin = ({ register }) => {
       />
       <InputField
         label={"Organization Name"}
-        placeholder={"e.g. Univarsity of Punjab "}
+        placeholder={"e.g. University of Punjab "}
         name={"organization name"}
         id={"organization name"}
         type={"text"}

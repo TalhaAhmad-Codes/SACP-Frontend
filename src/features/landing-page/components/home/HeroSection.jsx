@@ -1,8 +1,17 @@
-import { memo } from "react";
+import { memo, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { FadeUp } from "@shared/components/FadeUp";
 
 const HeroSection = memo(function HeroSection() {
+  const handleExploreFeatures = useCallback(() => {
+    // console.log("CLICK FIRED!!!");
+
+    document.getElementById("features")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }, []);
+
   return (
     <section className="relative overflow-hidden py-20 md:py-28">
       <div className="max-w-300 mx-auto relative">
@@ -29,33 +38,35 @@ const HeroSection = memo(function HeroSection() {
         {/* Sub */}
         <FadeUp delay={0.2} className="text-center mb-9 max-w-2xl mx-auto">
           <p className="text-[16px] md:text-[18px] text-[#434655] leading-relaxed">
-            An intelligent, automated, and centralized communication solution
-            for academic institutions — powered by AI and modern distributed
+            A smart, automated, and centralized communication solution for
+            academic institutions — powered by AI and modern distributed
             architecture.
           </p>
         </FadeUp>
 
         {/* CTAs */}
-        <FadeUp
-          delay={0.3}
-          className="flex items-center justify-center gap-4 flex-wrap mb-14"
-        >
+        <FadeUp delay={0.3} className="mb-14">
+          <div className="flex items-center justify-center gap-4 flex-wrap">
+            <button
+              type="button"
+              className="button"
+              onClick={handleExploreFeatures}
+            >
+              Explore Features
+            </button>
 
-          
-          <button  className="button">
-            Explore Features
-          </button>
-          <Link
-            to="/about"
-            className="text-[#004ac6] font-semibold text-[15px] hover:no-underline transition-colors flex items-center gap-1"
-          >
-            Meet the Team
-          </Link>
+            <Link
+              to="/about"
+              className="text-[#004ac6] font-semibold text-[15px] hover:no-underline transition-colors flex items-center gap-1"
+            >
+              Meet the Team
+            </Link>
+          </div>
         </FadeUp>
 
         {/* Dashboard Mockup */}
         <FadeUp delay={0.4}>
-          <div className="relative mx-auto max-w-4xl">
+          <div className="relative mx-auto max-w-4xl pointer-events-none">
             <div className="absolute inset-x-0 bottom-0 h-28 bg-linear-to-t from-white to-transparent z-10 pointer-events-none" />
             <div className="relative rounded-2xl overflow-hidden border border-border-surface shadow-2xl shadow-heading/10">
               {/* Browser chrome */}

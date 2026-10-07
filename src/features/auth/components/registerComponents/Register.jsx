@@ -5,16 +5,15 @@ import Button from "@shared/components/Button";
 import Student from "./Student";
 import Faculty from "./Faculty";
 // import FormHeader from "../../../../shared/components/TopLogo";
-import Admin from "./Admin"; 
-
+import Admin from "./Admin";
 
 const RightRegisterContent = ({ onNavigate }) => {
-  const [activeRole, setActiveRole] = useState("Student"); 
-  
+  const [activeRole, setActiveRole] = useState("Student");
+
   const { register, handleSubmit, setValue } = useForm({
     defaultValues: {
       role: "Student",
-    }
+    },
   });
 
   useEffect(() => {
@@ -22,15 +21,17 @@ const RightRegisterContent = ({ onNavigate }) => {
   }, [activeRole, setValue]);
 
   const onSubmit = (data) => {
-    console.log("Registered Form Data:", data); 
+    console.log("Registered Form Data:", data);
   };
 
   // Simplified: Extracted the active background styles out since motion handles it now
   const getButtonClass = (role) => {
-    const baseClass = "relative z-10 w-full rounded-sm transition-colors duration-200 text-sm font-medium text-center p-2 cursor-pointer";
+    const baseClass =
+      "relative z-10 w-full rounded-sm transition-colors duration-200 text-sm font-medium text-center p-2 cursor-pointer";
     const activeClass = "text-black ";
-    const inactiveClass = "text-gray-500 hover:text-gray-900 hover:font-bold text-center shrink-1 p-2";
-    
+    const inactiveClass =
+      "text-gray-500 hover:text-gray-900 hover:font-bold text-center shrink-1 p-2";
+
     return `${baseClass} ${activeRole === role ? activeClass : inactiveClass}`;
   };
 
@@ -43,7 +44,7 @@ const RightRegisterContent = ({ onNavigate }) => {
             key="student"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
+            exit={{ opacity: 0, x: -10 }}
             transition={{ duration: 0.2 }}
           >
             <Student register={register} />
@@ -55,7 +56,7 @@ const RightRegisterContent = ({ onNavigate }) => {
             key="faculty"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
+            exit={{ opacity: 0, x: -10 }}
             transition={{ duration: 0.2 }}
           >
             <Faculty register={register} />
@@ -67,10 +68,10 @@ const RightRegisterContent = ({ onNavigate }) => {
             key="admin"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
+            exit={{ opacity: 0, x: -10 }}
             transition={{ duration: 0.2 }}
           >
-            <Admin register={register}/>
+            <Admin register={register} />
           </motion.div>
         );
       default:
@@ -80,89 +81,87 @@ const RightRegisterContent = ({ onNavigate }) => {
 
   return (
     // 1. Smoothly fade the entire view on page enter
-    
-      
- <div className="md:bg-white/10  bg-transparent sm:backdrop-blur-lg sm:border sm:border-gray-200 space-y-6 w-full sm:w-lg lg:w-xl sm:py-10 sm:px-8 rounded-2xl sm:shadow-xl">          <h1 className="main-heading-2 mb-2 font-bold leading-tight">
-            Create an Account
-          </h1> 
-          
-          <p className=" mb-6 ">
-            Join the Smart Academic Communication Platform workspace.
-          </p>
 
-          <form className="box-border flex flex-col gap-1 w-full space-y-4" onSubmit={handleSubmit(onSubmit)}>
+    <div className="md:bg-white/10  bg-transparent sm:backdrop-blur-lg sm:border sm:border-gray-200 space-y-6 w-full sm:w-lg lg:w-xl sm:py-10 sm:px-8 rounded-2xl sm:shadow-xl">
+      {" "}
+      <h1 className="main-heading-2 mb-2 font-bold leading-tight">
+        Create an Account
+      </h1>
+      <p className=" mb-6 ">
+        Join the Smart Academic Communication Platform workspace.
+      </p>
+      <form
+        className="box-border flex flex-col gap-1 w-full space-y-4"
+        onSubmit={handleSubmit(onSubmit)}
+      >
+        {/* Role Selection Tabs */}
+        <div className="relative grid grid-cols-3 place-items-center bg-role-box border p-1 border-role-box-border rounded-md mb-1 ">
+          {/* ADMIN BUTTON */}
+          <button
+            type="button"
+            className={getButtonClass("Admin")}
+            onClick={() => setActiveRole("Admin")}
+          >
+            {activeRole === "Admin" && (
+              <motion.div
+                layoutId="activeTabPill"
+                className="absolute inset-0 bg-white border border-role-box-border shadow-md rounded-sm -z-10"
+                transition={{ type: "spring", stiffness: 380, damping: 30 }}
+              />
+            )}
+            Admin
+          </button>
 
-            {/* Role Selection Tabs */}
-            <div className="relative grid grid-cols-3 place-items-center bg-role-box border p-1 border-role-box-border rounded-md mb-1 ">
-              
-              {/* ADMIN BUTTON */}
-              <button 
-                type="button" 
-                className={getButtonClass("Admin")} 
-                onClick={() => setActiveRole("Admin")}
-              >
-                {activeRole === "Admin" && (
-                  <motion.div 
-                    layoutId="activeTabPill"
-                    className="absolute inset-0 bg-white border border-role-box-border shadow-md rounded-sm -z-10"
-                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                  />
-                )}
-                Admin
-              </button>
+          {/* FACULTY BUTTON */}
+          <button
+            type="button"
+            className={getButtonClass("Faculty")}
+            onClick={() => setActiveRole("Faculty")}
+          >
+            {activeRole === "Faculty" && (
+              <motion.div
+                layoutId="activeTabPill"
+                className="absolute inset-0 bg-white border border-role-box-border shadow-md rounded-sm -z-10"
+                transition={{ type: "spring", stiffness: 380, damping: 30 }}
+              />
+            )}
+            Faculty
+          </button>
 
-              {/* FACULTY BUTTON */}
-              <button 
-                type="button" 
-                className={getButtonClass("Faculty")} 
-                onClick={() => setActiveRole("Faculty")}
-              >
-                {activeRole === "Faculty" && (
-                  <motion.div 
-                    layoutId="activeTabPill"
-                    className="absolute inset-0 bg-white border border-role-box-border shadow-md rounded-sm -z-10"
-                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                  />
-                )}
-                Faculty
-              </button>
-
-              {/* STUDENT BUTTON */}
-              <button 
-                type="button" 
-                className={getButtonClass("Student")} 
-                onClick={() => setActiveRole("Student")}
-              >
-                {activeRole === "Student" && (
-                  <motion.div 
-                    layoutId="activeTabPill"
-                    className="absolute inset-0 bg-white border border-role-box-border shadow-md rounded-sm -z-10"
-                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                  />
-                )}
-                Student
-              </button>
-            </div>
-
-            {/* 2. AnimatePresence lets components animate out before a new one animates in */}
-            <div className="overflow-hidden py-2">
-              <AnimatePresence mode="wait">
-                {renderRoleFields()}
-              </AnimatePresence>
-            </div>
-  
-            <Button label={`Create ${activeRole} Account`}/>
-          </form>
-
-          <p className="text-center mt-10 text-sm">
-            Already have an account?
-            <span onClick={onNavigate} className=" font-semibold cursor-pointer hover:underline hover:text-blue-600 transition-colors duration-200 ml-2">
-              Login here
-            </span>
-          </p>
-
+          {/* STUDENT BUTTON */}
+          <button
+            type="button"
+            className={getButtonClass("Student")}
+            onClick={() => setActiveRole("Student")}
+          >
+            {activeRole === "Student" && (
+              <motion.div
+                layoutId="activeTabPill"
+                className="absolute inset-0 bg-white border border-role-box-border shadow-md rounded-sm -z-10"
+                transition={{ type: "spring", stiffness: 380, damping: 30 }}
+              />
+            )}
+            Student
+          </button>
         </div>
-        
+
+        {/* 2. AnimatePresence lets components animate out before a new one animates in */}
+        <div className="overflow-hidden py-2">
+          <AnimatePresence mode="wait">{renderRoleFields()}</AnimatePresence>
+        </div>
+
+        <Button label={`Create ${activeRole} Account`} />
+      </form>
+      <p className="text-center mt-10 text-sm">
+        Already have an account?
+        <span
+          onClick={onNavigate}
+          className=" font-semibold cursor-pointer hover:underline hover:text-blue-600 transition-colors duration-200 ml-2"
+        >
+          Login here
+        </span>
+      </p>
+    </div>
   );
 };
 
