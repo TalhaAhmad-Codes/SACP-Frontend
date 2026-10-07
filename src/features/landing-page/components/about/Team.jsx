@@ -31,7 +31,7 @@ function TeamSection() {
   ];
   return (
     <>
-      <section className="bg-slate-50 py-16 px-4 sm:px-6 lg:px-8 font-sans">
+      <section className="bg-white py-16 px-4 sm:px-6 lg:px-8 font-sans">
         <div className="max-w-7xl mx-auto">
           {/* Grid Container */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

@@ -10,7 +10,6 @@ const Auth = ({ initialView = "login" }) => {
   return (
     /* 1. Added 'relative' to the screen container to anchor absolute children */
     <div className="relative px-6 sm:px-0 py-10 min-h-screen w-full flex flex-col justify-center items-center overflow-hidden app">
-      
       {/* 2. Absolute Background Layer: Fits the entire viewport safely behind the forms */}
       <div className="hidden sm:block absolute inset-0 z-0 pointer-events-none">
         <DotGrid

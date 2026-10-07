@@ -7,7 +7,7 @@ const FeatureCard = memo(function FeatureCard({ f }) {
 
   return (
     <div
-      className={`bg-white border border-border-surface rounded-2xl p-6 h-full
+      className={`bg-white border border-[#e2e8f0] rounded-2xl p-6 h-full
                      hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300
                      ${f.large ? "md:col-span-2" : "md:col-span-1"}`}
     >
@@ -58,7 +58,10 @@ const FeatureCard = memo(function FeatureCard({ f }) {
 
 const FeaturesSection = memo(function FeaturesSection() {
   return (
-    <section className="py-20 px-4 md:px-6 bg-bg-features">
+    <section
+      id="features"
+      className="scroll-mt-20 py-20 px-4 md:px-6 bg-bg-features"
+    >
       <div className="max-w-300 mx-auto">
         <FadeUp className="text-center mb-14">
           <h2

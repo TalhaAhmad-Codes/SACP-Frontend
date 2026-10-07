@@ -12,8 +12,9 @@ export function FadeUp({ children, delay = 0, className = "" }) {
       ref={ref}
       className={className}
       style={{
-        opacity:    visible ? 1 : 0,
-        transform:  visible ? "translateY(0)" : "translateY(36px)",
+        opacity: visible ? 1 : 0,
+        transform: visible ? "translateY(0)" : "translateY(36px)",
+        pointerEvents: visible ? "auto" : "none",
         transition: `opacity .65s cubic-bezier(.16,1,.3,1) ${delay}s,
                      transform .65s cubic-bezier(.16,1,.3,1) ${delay}s`,
       }}

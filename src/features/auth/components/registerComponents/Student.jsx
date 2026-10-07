@@ -19,24 +19,26 @@ const Student = ({ register }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeIn" }}
         >
-          <label for="department" className="label">
+          <label for="department" className="label w-full">
             Degree/Certificate
           </label>
 
-          <select id="degree" name="degree" className=" form-field ">
+          <select id="degree" name="degree" className="form-field">
             <option value="" disabled selected>
               Select Degree/Certificate
             </option>
+
             <option value="BS"></option>
-            <option value="engineering"></option>
-            <option value="marketing"></option>
+            <option value="Engineering"></option>
+            <option value="Marketing"></option>
           </select>
         </motion.div>
+
         <InputField
-          label={"Registeration Number"}
+          label={"Registration Number"}
           placeholder={"e.g. INS-DEPX-RN-YYYY"}
-          name={"registeration number"}
-          id={"registeration number"}
+          name={"registration number"}
+          id={"registration number"}
           type={"text"}
           register={register}
         />
