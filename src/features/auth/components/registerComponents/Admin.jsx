@@ -12,8 +12,8 @@ const Admin = ({ register }) => {
         register={register}
       />
       <InputField
-        label={"Organization Name"}
-        placeholder={"e.g. University of Punjab "}
+        label={"Institution Name"}
+        placeholder={"e.g. University of the Punjab"}
         name={"organization name"}
         id={"organization name"}
         type={"text"}
