@@ -20,7 +20,7 @@ export default function ContactForm() {
         onSubmit={handleSubmit} 
         className="md:min-w-2xl sm:max-w-2xl mx-auto bg-white border border-gray-200/60 rounded-2xl p-6 sm:p-8 shadow-lg flex flex-col gap-4 "
       >
-        <h3 className="text-2xl font-heading font-extrabold text-gray-900 tracking-wide mb-3 italic">
+        <h3 className="text-2xl font-heading font-extrabold text-gray-900 tracking-wide mb-3">
           Send us a Message
         </h3>
         

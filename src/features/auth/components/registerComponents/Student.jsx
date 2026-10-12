@@ -28,9 +28,9 @@ const Student = ({ register }) => {
               Select Degree/Certificate
             </option>
 
-            <option value="BS"></option>
-            <option value="Engineering"></option>
-            <option value="Marketing"></option>
+            <option value="BA">Bachelor of Arts</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Marketing">Marketing</option>
           </select>
         </motion.div>
 
