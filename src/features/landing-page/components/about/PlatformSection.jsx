@@ -1,9 +1,9 @@
 function PlatformSection() {
     return (
 
-            <div className="bg-white font-sans text-slate-600 antialiased">
+            <div className="bg-[#031530] font-sans text-slate-600 antialiased">
               
-                <section className="bg-[#031530] text-white py-12 px-6 sm:px-12 md:px-16 rounded-b-none lg:rounded-2xl max-w-7xl mx-auto my-6">
+                <section className="bg-[#031530] text-white py-12 px-6 sm:px-12 md:px-16  max-w-7xl mx-auto rounded-none mt-0">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 
                        
