@@ -16,7 +16,7 @@ const Auth = ({ initialView = "login" }) => {
           dotSize={3}
           gap={15}
           baseColor="#dad7e2"
-          activeColor="#522711"
+          activeColor="#522a11"
           proximity={90}
           shockRadius={250}
           shockStrength={5}
