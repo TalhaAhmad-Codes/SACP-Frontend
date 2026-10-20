@@ -1,6 +1,6 @@
 import { Suspense, lazy } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import DashboardNavbar from "./shared/components/DashboardNavbar";
+import Dashboard from "@features/dashboard/Dashboard.jsx";
 
 const HomePage = lazy(() => import("@features/landing-page/pages/HomePage"));
 const AboutPage = lazy(() => import("@features/landing-page/pages/AboutPage"));
@@ -21,7 +21,7 @@ const App = () => {
           }
         >
           <Routes>
-            <Route path="/dashboard" element={<DashboardNavbar/>} />
+            <Route path="/dashboard" element={<Dashboard/>} />
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
